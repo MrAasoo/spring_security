@@ -14,6 +14,7 @@
 
     <modules>
         <module>basic_auth</module>
+        <module>basic_auth_in_memory_user</module>
     </modules>
 
     <properties>
