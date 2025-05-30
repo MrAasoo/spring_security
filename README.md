@@ -11,7 +11,8 @@ This module provides a simple implementation of **Spring Security Basic Authenti
 ## 🔧 Features
 
 - HTTP Basic Authentication using Spring Security
-- In-memory user details for quick setup
+- Default user details in .properties for quick setup
+- In-memory user authentication
 - Maven-based build system
 - Pre-configured security settings
 
