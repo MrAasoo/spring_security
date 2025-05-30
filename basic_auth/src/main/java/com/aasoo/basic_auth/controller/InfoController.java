@@ -13,6 +13,6 @@ public class InfoController {
 
     @GetMapping("/test")
     public String test() {
-        return "Basic Auth is running!";
+        return "Basic Auth is authentication success!";
     }
 }
