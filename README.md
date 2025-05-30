@@ -6,6 +6,7 @@ This module provides a simple implementation of **Spring Security Basic Authenti
 
 `basic-auth`
 `basic_auth_in_memory_user`
+`basic_auth_db_user`
 
 ---
 
