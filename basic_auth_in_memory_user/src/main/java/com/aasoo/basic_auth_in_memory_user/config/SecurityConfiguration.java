@@ -24,7 +24,7 @@ public class SecurityConfiguration {
                         }
                 ) // Disable CSRF for simplicity, not recommended for production
                 .authorizeHttpRequests(authorize ->
-                        authorize.requestMatchers("/", "/auth").permitAll() // Allow access to /info without authentication
+                        authorize.requestMatchers("/").permitAll() // Allow access to /info without authentication
                                 .anyRequest().authenticated() // Require authentication for all other requests
                 )
                 .httpBasic(Customizer.withDefaults())// Use basic authentication
