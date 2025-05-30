@@ -5,6 +5,7 @@ This module provides a simple implementation of **Spring Security Basic Authenti
 ## 📦 Module Name
 
 `basic-auth`
+`basic_auth_in_memory_user`
 
 ---
 
@@ -32,5 +33,4 @@ This module provides a simple implementation of **Spring Security Basic Authenti
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-repo/your-project.git
-cd basic-auth
+git clone https://github.com/MrAasoo/spring_security.git
