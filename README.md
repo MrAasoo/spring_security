@@ -31,6 +31,7 @@ This repository contains modular implementations of **Spring Security authentica
 - 🧪 Ready-to-run example with pre-configured security settings
 - 📦 Modular architecture (each strategy in its own Maven module)
 - ⚙️ Easy to extend for database-backed or OAuth2 integrations
+- 📘 **Swagger UI** (via SpringDoc OpenAPI)
 
 ---
 
@@ -39,8 +40,9 @@ This repository contains modular implementations of **Spring Security authentica
 - **Java 17+**
 - **Spring Boot 3**
 - **Spring Security**
-- **JWT (via `jjwt` or similar library)**
+- **JWT (via `jjwt`)**
 - **Maven**
+- **SpringDoc OpenAPI** (for Swagger UI)
 
 ---
 
