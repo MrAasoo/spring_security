@@ -17,6 +17,7 @@
         <module>basic_auth_in_memory_user</module>
         <module>basic_auth_db_user</module>
         <module>jwt_auth_in_memory_user</module>
+        <module>jwt_auth_db_user</module>
     </modules>
 
     <properties>
