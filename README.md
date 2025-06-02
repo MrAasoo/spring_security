@@ -1,66 +1,94 @@
 # 🔐 Spring Security Auth Modules
 
-This repository contains modular implementations of **Spring Security authentication mechanisms**, designed to be clean, reusable, and extensible. The focus is on demonstrating multiple approaches to **Basic Authentication** and **JWT Authentication** using different user sources.
+A modular Spring Boot project showcasing multiple authentication strategies using **Spring Security**, including:
+
+- 🔒 Basic Authentication
+- 🔑 JWT-based Authentication
+- 🔗 OAuth2 Login (Google, GitHub)
+
+Each module is self-contained, production-ready, and designed to be extensible for real-world applications.
 
 ---
 
 ## 📦 Modules
 
-### 1. `basic_auth`
-- **Description**: Basic Auth using a single user defined in `application.properties`.
-- **Use Case**: Quick-start or demo apps where credentials are hardcoded via config.
-
-### 2. `basic_auth_in_memory_user`
-- **Description**: Basic Auth with multiple users defined using an in-memory `UserDetailsService`.
-- **Use Case**: Simple role-based access control for prototypes or internal tools.
-
-### 3. `basic_auth_db_user`
-- **Description**: Basic Auth with users and roles stored in a database.
-- **Use Case**: Production-ready authentication with persistent user storage.
-
-### 4. `jwt_auth_in_memory_user`
-- **Description**: JWT-based authentication using in-memory user details.
-- **Use Case**: Stateless APIs with token-based auth for testing or dev purposes.
-
-### 5. `jwt_auth_db_user`
-- **Description**: JWT-based authentication with users stored in a database.
-- **Use Case**: Secure APIs with persistent user management and token generation.
-- **User Role**: Roles are fetched from the database, allowing for flexible access control.
+| Module Name                | Type        | Description                                                                 |
+|----------------------------|-------------|-----------------------------------------------------------------------------|
+| `basic_auth`               | Basic Auth  | Single hardcoded user via `application.properties`.                         |
+| `basic_auth_in_memory_user`| Basic Auth  | In-memory `UserDetailsService` for multiple users.                          |
+| `basic_auth_db_user`       | Basic Auth  | Users and roles stored in a relational database.                            |
+| `jwt_auth_in_memory_user`  | JWT         | Stateless token-based auth with in-memory users.                            |
+| `jwt_auth_db_user`         | JWT         | JWT with persistent user storage and database roles.                        |
+| `oauth2`                   | OAuth2      | Login via Google or GitHub using Spring Security OAuth2.                    |
 
 ---
 
-## 🔧 Features
+## ⚙️ Tech Stack
 
-- 🔒 **Spring Security Basic Auth** (Single user, In-memory, Database)
-- 🔑 **JWT Authentication** (In-memory, Database)
-- 🧪 Ready-to-run example with pre-configured security settings
-- 📦 Modular architecture (each strategy in its own Maven module)
-- ⚙️ Easy to extend for database-backed integrations
-- 📘 **Swagger UI** (via SpringDoc OpenAPI)
-
----
-
-## 🛠️ Tech Stack
-
-- **Java 17+**
-- **Spring Boot 3**
-- **Spring Security**
-- **JWT (via `jjwt`)**
-- **Maven**
-- **SpringDoc OpenAPI** (for Swagger UI)
+- Java 17+
+- Spring Boot 3
+- Spring Security
+- OAuth2 Client (Google, GitHub)
+- JWT (via `jjwt`)
+- SpringDoc OpenAPI (Swagger)
+- Maven
 
 ---
 
 ## 🚀 Getting Started
 
-Each module is a self-contained Spring Boot application. You can run them individually:
-
----
-
-### 1. Clone the Repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/MrAasoo/spring_security.git
-cd basic_auth
-mvn spring-boot:run
+cd spring_security
+```
 
+### 2. Run a specific module
+
+Each module is a standalone Spring Boot app. Choose and run one:
+
+```bash
+cd <module_name>
+mvn spring-boot:run
+```
+Replace *module_name* with any module name like jwt_auth_db_user, oauth2, etc.
+
+---
+
+## 🔧 Environment Setup
+Some modules (like oauth2) require environment variables.
+
+### Sample .env file
+```dotenv
+# OAuth2
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+GITHUB_CLIENT_ID=your-github-client-id
+GITHUB_CLIENT_SECRET=your-github-client-secret
+```
+- You can place .env in the project root and load it via your IDE or custom Java code.
+
+---
+
+## 📖 Documentation
+
+Each module has its own documentation Swagger UI is available at:
+
+```bash
+http://localhost:{module_server_port}/swagger-ui.html
+```
+
+Replace `{module_server_port}` with the port configured for the specific module can be found in 'application.properties'.
+
+---
+
+## 🤝 Contributing
+
+- Pull requests and issue reports are welcome. Feel free to fork, extend, and share feedback.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
