@@ -22,15 +22,20 @@ This repository contains modular implementations of **Spring Security authentica
 - **Description**: JWT-based authentication using in-memory user details.
 - **Use Case**: Stateless APIs with token-based auth for testing or dev purposes.
 
+### 5. `jwt_auth_db_user`
+- **Description**: JWT-based authentication with users stored in a database.
+- **Use Case**: Secure APIs with persistent user management and token generation.
+- **User Role**: Roles are fetched from the database, allowing for flexible access control.
+
 ---
 
 ## 🔧 Features
 
 - 🔒 **Spring Security Basic Auth** (Single user, In-memory, Database)
-- 🔑 **JWT Authentication** (In-memory users for now)
+- 🔑 **JWT Authentication** (In-memory, Database)
 - 🧪 Ready-to-run example with pre-configured security settings
 - 📦 Modular architecture (each strategy in its own Maven module)
-- ⚙️ Easy to extend for database-backed or OAuth2 integrations
+- ⚙️ Easy to extend for database-backed integrations
 - 📘 **Swagger UI** (via SpringDoc OpenAPI)
 
 ---
