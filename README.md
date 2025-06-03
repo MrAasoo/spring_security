@@ -19,19 +19,19 @@ Each module is self-contained, production-ready, and designed to be extensible f
 | `basic_auth_db_user`       | Basic Auth  | Users and roles stored in a relational database.                            |
 | `jwt_auth_in_memory_user`  | JWT         | Stateless token-based auth with in-memory users.                            |
 | `jwt_auth_db_user`         | JWT         | JWT with persistent user storage and database roles.                        |
-| `oauth2`                   | OAuth2      | Login via Google or GitHub using Spring Security OAuth2.                    |
+| `oauth2`                   | OAuth2      | Login via `Google` or `GitHub` using Spring Security OAuth2.                    |
 
 ---
 
 ## ⚙️ Tech Stack
 
-- Java 17+
-- Spring Boot 3
-- Spring Security
-- OAuth2 Client (Google, GitHub)
-- JWT (via `jjwt`)
-- SpringDoc OpenAPI (Swagger)
-- Maven
+> - Java 17+
+> - Spring Boot 3
+> - Spring Security
+> - OAuth2 Client (Google, GitHub)
+> - JWT (via `jjwt`)
+> - SpringDoc OpenAPI (Swagger)
+> - Maven
 
 ---
 
@@ -79,7 +79,7 @@ Each module has its own documentation Swagger UI is available at:
 http://localhost:{module_server_port}/swagger-ui.html
 ```
 
-Replace `{module_server_port}` with the port configured for the specific module can be found in 'application.properties'.
+Replace `{module_server_port}` with the port configured for the specific module can be found in `application.properties`.
 
 ---
 
