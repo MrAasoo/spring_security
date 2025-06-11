@@ -12,14 +12,16 @@ Each module is self-contained, production-ready, and designed to be extensible f
 
 ## 📦 Modules
 
-| Module Name                | Type        | Description                                                                 |
-|----------------------------|-------------|-----------------------------------------------------------------------------|
-| `basic_auth`               | Basic Auth  | Single hardcoded user via `application.properties`.                         |
-| `basic_auth_in_memory_user`| Basic Auth  | In-memory `UserDetailsService` for multiple users.                          |
-| `basic_auth_db_user`       | Basic Auth  | Users and roles stored in a relational database.                            |
-| `jwt_auth_in_memory_user`  | JWT         | Stateless token-based auth with in-memory users.                            |
-| `jwt_auth_db_user`         | JWT         | JWT with persistent user storage and database roles.                        |
-| `oauth2`                   | OAuth2      | Login via `Google` or `GitHub` using Spring Security OAuth2.                    |
+| Module Name                | Type          | Description                                                  |
+|----------------------------|---------------|--------------------------------------------------------------|
+| `basic_auth`               | Basic Auth    | Single hardcoded user via `application.properties`.          |
+| `basic_auth_in_memory_user`| Basic Auth    | In-memory `UserDetailsService` for multiple users.           |
+| `basic_auth_db_user`       | Basic Auth    | Users and roles stored in a relational database.             |
+| `jwt_auth_in_memory_user`  | JWT           | Stateless token-based auth with in-memory users.             |
+| `jwt_auth_db_user`         | JWT           | JWT with persistent user storage and database roles.         |
+| `oauth2`                   | OAuth2        | Login via `Google` or `GitHub` using Spring Security OAuth2. |
+| `oauth2_jwt_db_user`       | OAuth2 + JWT  | OAuth2 login with JWT token generation.                      | 
+
 
 ---
 
@@ -60,6 +62,7 @@ Replace *module_name* with any module name like jwt_auth_db_user, oauth2, etc.
 Some modules (like oauth2) require environment variables.
 
 ### Sample .env file
+
 ```dotenv
 # OAuth2
 GOOGLE_CLIENT_ID=your-google-client-id
@@ -68,6 +71,12 @@ GITHUB_CLIENT_ID=your-github-client-id
 GITHUB_CLIENT_SECRET=your-github-client-secret
 ```
 - You can place .env in the project root and load it via your IDE or custom Java code.
+
+### OAuth2 Configuration
+For OAuth2 modules, ensure you have valid client credentials from Google and GitHub. You can register your application on their developer portals to obtain these.
+
+- For Google: [Google Developer Console](https://console.developers.google.com/)
+- For GitHub: [GitHub Developer Settings](https://github.com/settings/developers)
 
 ---
 

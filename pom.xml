@@ -19,6 +19,7 @@
         <module>jwt_auth_in_memory_user</module>
         <module>jwt_auth_db_user</module>
         <module>oauth2</module>
+        <module>oauth2_jwt_db_user</module>
     </modules>
 
     <properties>
