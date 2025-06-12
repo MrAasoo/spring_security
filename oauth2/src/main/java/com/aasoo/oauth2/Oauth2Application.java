@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Oauth2Application {
 
 	static {
-		Dotenv dotenv = Dotenv.load(); // Load .env file
+		Dotenv dotenv = Dotenv.configure().ignoreIfMissing().load(); // Load .env file
 		dotenv.entries().forEach(entry -> System.setProperty(entry.getKey(), entry.getValue()));
 	}
 
